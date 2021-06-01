@@ -1,3 +1,14 @@
+@extends('layouts.layout')
+
+@section('titrePage')
+    Liste des Dessinateurs
+@endsection
+
+@section('titreItem')
+    <h1> Tous les  dessinateurs : </h1>
+@endsection
+
+@section('contenu')
 <table class="table table-bordered table-striped">
     <thead>
         <th>Id</th>
@@ -12,3 +23,4 @@
         </tr>
     @endforeach
 </table>
+@endsection

@@ -1,3 +1,14 @@
+@extends('layouts.layout')
+
+@section('titrePage')
+    Liste des Mangas
+@endsection
+
+@section('titreItem')
+    <h1> Tous les mangas : </h1>
+@endsection
+
+@section('contenu')
 <table class="table table-bordered table-striped">
     <thead>
         <th>Id</th>
@@ -18,3 +29,4 @@
         </tr>
     @endforeach
 </table>
+@endsection
