@@ -9,8 +9,8 @@
 @endsection
 
 @section('contenu')
-<table class="table table-bordered table-striped">
-    <thead>
+<table class="table table-sm table-striped">
+    <thead class="table-dark">
         <th>Id</th>
         <th>Titre</th>
         <th>Prix</th>
