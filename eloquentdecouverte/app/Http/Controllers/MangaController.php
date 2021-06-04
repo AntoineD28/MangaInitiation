@@ -47,7 +47,7 @@ class MangaController extends Controller
      */
     public function show(Manga $manga)
     {
-        //
+        return view('manga', compact('manga'));
     }
 
     /**
@@ -81,6 +81,11 @@ class MangaController extends Controller
      */
     public function destroy(Manga $manga)
     {
-        //
+        //La méthode back() permet de retourner sur la page sur laquelle
+        //la méthode destroy a été invoquée (index.blade.php)
+        //la méthode with() permet de placer un message dans une variable de session
+        //info est le nom de cette variable de session
+        $manga->delete();
+        return back()->with('info', 'le manga a bien été supprimé de la base de données');
     }
 }
