@@ -14,7 +14,8 @@ class MangaController extends Controller
      */
     public function index()
     {
-        //
+        $mangas = Manga::all();
+        return view('index', compact('mangas'));
     }
 
     /**
@@ -47,6 +48,11 @@ class MangaController extends Controller
     public function show(Manga $manga)
     {
         //
+        $dessinateur = $manga->dessinateur;
+        $scenariste = $manga->scenariste;
+        $genre = $manga->genre;
+        $path = 'images/'.$manga->couverture;
+        return view('manga', compact('manga', 'dessinateur', 'scenariste', 'genre', 'path'));
     }
 
     /**
