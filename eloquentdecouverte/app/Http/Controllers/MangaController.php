@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Manga;
 use Illuminate\Http\Request;
+use App\Http\Requests\InsertMangaRequest;
 
 class MangaController extends Controller
 {
@@ -25,7 +26,8 @@ class MangaController extends Controller
      */
     public function create()
     {
-        //
+        //On retournee la vue contenant l formulaire "create"
+        return view('create');
     }
 
     /**
@@ -34,9 +36,11 @@ class MangaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(InsertMangaRequest $request)
     {
         //
+        Manga::create($request->all());
+        return view('confirm');
     }
 
     /**

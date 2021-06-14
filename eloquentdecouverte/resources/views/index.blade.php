@@ -25,6 +25,7 @@
         <th>Genre</th>
         <th></th>
         <th></th>
+        <th><a class="btn btn-success" href="{{ route('mangas.create') }}">Nouveau Manga</a></th>
     </thead>
     @foreach($mangas as $manga)
         <tr>
